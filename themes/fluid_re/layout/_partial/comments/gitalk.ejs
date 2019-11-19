@@ -1,0 +1,23 @@
+<% if(theme.gitalk.clientID && theme.gitalk.clientSecret && theme.gitalk.repo){ %>
+  <div id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script defer src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.11.1/js/md5.min.js"></script>
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '5004830e1d5d6fb92e30',
+      clientSecret: '7cb1f69d4707d009a58c970b8960e3ee848c4506',
+      repo: 'huangxjgit.github.io',
+      owner: 'huangxjgit',
+      admin: ['huangxjgit'],
+      id: md5(window.location.pathname),
+      language: '<%- theme.gitalk.language %>',
+      perPage: <%- theme.gitalk.perPage %>,
+      pagerDirection: '<%- theme.gitalk.pagerDirection %>',
+      createIssueManually: '<%- theme.gitalk.createIssueManually %>',
+      distractionFreeMode: true
+    });
+
+    gitalk.render('gitalk-container')
+  </script>
+<% } %>

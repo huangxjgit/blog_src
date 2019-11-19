@@ -1,0 +1,11 @@
+clientID: '<%- theme.gitalk.clientID %>5004830e1d5d6fb92e30',
+      clientSecret: '<%- theme.gitalk.clientSecret %>7cb1f69d4707d009a58c970b8960e3ee848c4506',
+      repo: '<%- theme.gitalk.repo %>huangxjgit.github.io',
+      owner: '<%- theme.gitalk.owner %>huangxjgit',
+      admin: ['<%- theme.gitalk.admin %>huangxjgit'],
+      id: md5(<%- theme.gitalk.id %>window.location.pathname),
+      language: '<%- theme.gitalk.language %>',
+      perPage: <%- theme.gitalk.perPage %>,
+      pagerDirection: '<%- theme.gitalk.pagerDirection %>',
+      createIssueManually: '<%- theme.gitalk.createIssueManually %>',
+      distractionFreeMode: true
